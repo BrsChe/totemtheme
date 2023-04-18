@@ -1,28 +1,28 @@
-<?php
-/*.Template name: Home*/
-?>
-<?php
-get_header();
-?>
+<?php /*.Template name: Home*/ ?>
+<?php get_header(); ?>
 <div class="torgi">
 	<div class= "text_torgi_1"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
-	<div class="carts_item"> <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
+	<div class="carts_item">
+        <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
 		<div class="carts_item_in">
-			<div class="item_image"><a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) {
-	                                        the_post_thumbnail();
-}  ?></a></div>
-			<div class="carts_text_1 carts_text"><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></div>
-		</div>	 <?php $i++; endwhile; wp_reset_query(); endif; ?>
+			<div class="item_image">
+                <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
+            </div>
+			<div class="carts_text_1 carts_text">
+                <a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
+            </div>
+		</div>
+        <?php $i++; endwhile; wp_reset_query(); endif; ?>
 		<div class="arr_1">
             <p><a href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/">Посмотреть все <br>объекты &rarr;</a></p>
 		</div>
-</div>
+    </div>
 
 </div>
 
 <div id="uslugi_new" class="uslugi_new">
 	<div class="uslugi_text text_torgi"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
-	<div class="carts_uslugi"> 
+	<div class="carts_uslugi">
 		<div class="carts_uslugi_1 all_carts_uslugi"><a style="display: block;" href="./soprovozdeniie-sdelok-oformlenie/" target="blank"><div class="a_block"><p class="text_center">Сопровождение сделок и проверка объектов недвижимости</p></div></a></div>
 		<div class="carts_uslugi_2 all_carts_uslugi"><a style="display: block;" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank"><div class="a_block"><p class="text_center">Участие в торгах по покупке и аренде недвижимости</p></div></a></div>
 		<div class="carts_uslugi_3 all_carts_uslugi"><a style="display: block;" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank"><div class="a_block"><p class="text_center">Судебные споры по недвижимости</p></div></a></div>

@@ -8,13 +8,13 @@
       <meta name='wmail-verification' content='2575a7a59c693d624881511000863585' />
       <meta name="google-site-verification" content="EFzwivlaFyYRYS8LDrCaN4MwYOpb9Kp1vFtp3NtZQSs" />
       <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' |'; } ?> <?php bloginfo('name'); ?></title>
-      <!--[if lt IE 9]> 
-      <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script> 
+      <!--[if lt IE 9]>
+      <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
       <![endif]-->
       <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon.png" />
-      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/owl.theme.default.min.css">
-      <?php wp_head(); ?>
+      <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/owl.theme.default.min.css">
+      <?php wp_head();?>
       <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
       <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
       <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
@@ -101,7 +101,7 @@
                echo strip_tags($menu, '<a>');
             ?>
          </div>
-         <div>
+         <div class="header_contacts">
             <div class="social-networks">
                <a href="https://vk.com/olga_land_lawyer">
                   <img src="<?php echo get_template_directory_uri() . '/images/totem/vk.svg';?>" alt="ВКонтакте" title="ВКонтакте">
@@ -113,38 +113,10 @@
                   <img src="<?php echo get_template_directory_uri() . '/images/totem/fb.svg';?>" alt="Фейсбук" title="Фейсбук">
                </a>
             </div>
-            <div>
-               <div class="">
-                  <div class="">
-                     <p><a href="tel:+79017548262">+7 (901) 754 82 62</a></p>
-                     <p><a href="mailto:info@legal-union.ru">info@legal-union.ru</a></p>
-                  </div>
-               </div>
+            <div class="header_bottom_contacts">
+               <a href="tel:+79017548262">+7 (901) 754 82 62</a>
+               <a href="mailto:info@legal-union.ru">info@legal-union.ru</a>
             </div>
          </div>
       </div>
    </header>
-
-
-
-
-<div class="container">
-    <div class="header_text">
-        <div class="header_text_up">
-            <div class="header_text_up_left">
-                <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('sitetitle'); ?>">UNION</a>
-            </div>
-            <div class="header_text_up_right">
-                Эксперт по недвижимости
-            </div>
-        </div>
-        <div class="header_text_down">
-            <div class="header_text_down_left">
-                <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('sitetitle'); ?>">legal expert</a>
-            </div>
-            <div class="header_text_down_right">
-                правовой консультант
-            </div>
-        </div>
-    </div>
-</div>

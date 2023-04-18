@@ -1,285 +1,83 @@
 /*
-Theme Name: Advokat Naumov
-Theme URI: http://advocate-naumov.ru
-Author: 
-Author URI: 
-Description: Theme Advokat Naumov.
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: naumov
-
-This theme is Tort.
+  Theme Name: totem theme
+  Theme URI: https://www.totem-design.ru/
+  Author: totem
+  Author URI: https://www.totem-design.ru/
+  Description: totem-design.
+  Version: 1.0
+  Text Domain: totem
 */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import "./css/fonts.css";
+
 html {
-  font-family: sans-serif;
+  font-family: 'Acrom';
+  font-weight: 400;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 	scroll-behavior: smooth;
 }
-body{
-	background: url('../../uploads/2022/09/fon2.jpg');
-  background-position: 0 0;
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-}
+body {
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
 }
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
+.container:after,
+.container:before {
+  clear: both;
+  content: "";
+  display: table;
 }
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
-a {
-  background-color: transparent;
-  color: #000080;
-}
-a:active,
-a:hover {
-  outline: 0;
-  color: #FF8C00
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
-strong {
-  font-weight: bold;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-mark {
-  background: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-img {
-  border: 0;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-figure {
-  margin: 1em 40px;
-}
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-pre {
-  overflow: auto;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-button {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-input {
-  line-height: normal;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  border: 0;
-  padding: 0;
-}
-textarea {
-  overflow: auto;
-}
-optgroup {
-  font-weight: bold;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-}
-@font-face {
-  font-family: 'tinosregular';
-  src: url('/fonts/tinos-regular.eot');
-  src: url('/fonts/tinos-regular.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/tinos-regular.woff') format('woff'),
-       url('/fonts/tinos-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'tinosbold';
-  src: url('/fonts/tinos-bold.eot');
-  src: url('/fonts/tinos-bold.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/tinos-bold.woff') format('woff'),
-       url('/fonts/tinos-bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'tinosbold_italic';
-  src: url('/fonts/tinos-bolditalic.eot');
-  src: url('/fonts/tinos-bolditalic.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/tinos-bolditalic.woff') format('woff'),
-       url('/fonts/tinos-bolditalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'tinositalic';
-  src: url('/fonts/tinos-italic.eot');
-  src: url('/fonts/tinos-italic.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/tinos-italic.woff') format('woff'),
-       url('/fonts/tinos-italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'CuprumBold';
-  src: url('/fonts/cuprum-bold.eot');
-  src: url('/fonts/cuprum-bold.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/cuprum-bold.woff') format('woff'),
-       url('/fonts/cuprum-bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'CuprumRegular';
-  src: url('/fonts/cuprum-regular.eot');
-  src: url('/fonts/cuprum-regular.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/cuprum-regular.woff') format('woff'),
-       url('/fonts/cuprum-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+.container {
+  width: calc(100vw - 15%);
+  margin-left: auto;
+  margin-right: auto;
 }
 #header {
-  background: linear-gradient(#C8102E, #Ff1821);
+  background: linear-gradient(to right, #C8102E, #Ff1821);
+  padding: 10px 0px;
+}
+.header_naw {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0px 10px;
+}
+.header_naw>a {
+  display: block;
+  text-align: center;
+  font-weight: 300;
 }
 #header>.container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-
-.social-networks {
+.header_contacts {
+  flex-shrink: 0;
+  font-weight: 300;
+  width: 158px;
+  text-align: justify;
+}
+#header .logo>img {
   height: 60px;
 }
-
+.social-networks {
+  height: 40px;
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 8px;
+  padding-right: 2px;
+}
 #header .social-networks img {
   height: 100%;
 }
-
 #header a {
 	color: #ffffff;
 	transition: 0.3s;
   text-decoration: none;
 }
-
 #header a:hover{
 	color: #000080;
 }
-
 #arrow {
   height: 114px;
   position: relative;
@@ -1062,26 +860,11 @@ margin-left: 25px;
 }
 #content .more .adress {
   background-image: url(../../wp-content/themes/naumov/images/pin-icon.png);
-  
 }
-.container:after,
-.container:before {
-  clear: both;
-  content: "";
-  display: table;
-}
-.container {
-  width: 1032px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 button {
   border: 0px;
   background-color: transparent;
-}
-body {
-  margin: 0px;
-  font-family: Calibri;
 }
 p {
   margin: 0 0 10px;
