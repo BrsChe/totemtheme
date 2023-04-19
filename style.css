@@ -67,7 +67,7 @@ body {
   margin-bottom: 8px;
   padding-right: 2px;
 }
-#header .social-networks img {
+#header .social-networks img, .foot_social-networks img {
   height: 100%;
 }
 #header a {
@@ -1154,10 +1154,18 @@ p.text_logo_down {
 	display:table-cell;
 	vertical-align:middle;
 }
-.body_foot{
-  max-width: 1032px;
-  margin-left: auto;
-  margin-right: auto;
+.body_foot {
+  background: linear-gradient(to right, #C8102E, #Ff1821);
+  position: relative;
+  width: 100%;
+}
+.foot_social-networks {
+  display: flex;
+  height: 55px;
+  width: 180px;
+  justify-content: space-between;
+  flex-shrink: 0;
+  
 }
 .soc_title{
 	font-size:25px;
@@ -1175,24 +1183,33 @@ p.text_logo_down {
 	border-radius: 10px;
 	margin: 0 0 0 30px;
 }
-.info_footer{
-	background-color: #FF8C00;
-	margin-top: 30px;
-	max-height: 130px;
+.info_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0;
 }
 .info_2{
 	display:inline-block;
 	width: 450px;
 }
 .info_all{
-	font-size:20px;
+  font-size: 20px;
+  text-align: left;
+  flex-shrink: 0;
+  margin-right: 30px;
+  color: #ffffff;
 }
-.info_cookie{
-	font-size:20px;
-	padding: 20px 0 0 0;
+.info_cookie {
+  font-size: 20px;
+  text-align: right;
+  flex-shrink: 0;
+  margin-right: 30px;
+  color: #ffffff;
+  font-weight: 600;
 }
 .info_contact{
-	padding: 0px 0 20px 20px;
+
 }
 img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     max-width: 194px;
@@ -1213,10 +1230,16 @@ img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     text-transform: uppercase;
 }
 .info_contact.info_2 {
-    vertical-align: bottom;
+  vertical-align: bottom;
+  width: 100%; 
 }
-.info_footer a:hover{
-	color:#fff;
+.info_footer a {
+  color: #ffffff;
+	transition: 0.3s;
+  text-decoration: none;
+}
+.info_footer a:hover {
+	color: #000080;
 }
 .carts_uslugi :hover{
 	background-color:#FF8C00;
@@ -1241,9 +1264,7 @@ display: none;
     line-height: 1.3em;
     padding-left: 60px;
 }
-.textwidget a{
-	 color: #fff !important;
-}
+
 .textwidget a:hover{
 	 color: #000080 !important;
 }

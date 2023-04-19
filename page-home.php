@@ -140,20 +140,7 @@
                     </div>
                 </div>
             </aside>
-                <div class="soc_seti">
-        <div class="body_foot"><div class="soc_title">Следите за новостями и обзорами в социальных сетяx</div>
-                <div class="soc_img">
-            <div class="soc_vk soc_style">
-                <a href="#"><img class="soc_img_2" src="../wp-content/uploads/2022/08/vk.png" alt=""></a>
-            </div>
-            <div class="soc_tg soc_style">
-                <a href="#"><img class="soc_img_2" src="../wp-content/uploads/2022/08/tg.png" alt=""></a>
-            </div>
-            <div class="soc_facebook soc_style">
-                <a href="#"><img class="soc_img_2" src="../wp-content/uploads/2022/08/facebook.png" alt=""></a>
-            </div>
         </div>
-    </div></div>
 <?php
 get_footer();
 ?>
