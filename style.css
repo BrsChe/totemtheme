@@ -8,6 +8,11 @@
   Text Domain: totem
 */
 @import "./css/fonts.css";
+/*****functional class*****/
+.p-s {
+  padding: 7px;
+}
+/**********************************************************************************************************************************/
 
 html {
   font-family: 'Acrom';
@@ -776,29 +781,34 @@ text-align: justify;
 }
 #content {}
 #content h1 {
+    font-family: Century Gothic;
     font-size: 32px;
-    color: #fff;
-	background-color:#FF8C00;
+    color: #C8102E;
+	  background-color:#E6E7E9;
     text-transform: uppercase;
     line-height: 1.3em;
-	margin-top: 0;
-	padding-left: 30px;
+	  margin-top: 50px;
+	  padding-left: 30px;
 }
 #content strong {
-    font-size: 21px;
-    font-family: Calibri;
+    color: #C8102E;
+    font-size: 29px;
+    font-family: Century Gothic;
     font-weight: 700;
 }
 #content p {
-    font-family: Calibri;
+    font-family: Acrom;
     font-size: 18px;
     line-height: 20px;
 }
 #content h2  {
-margin-left: 25px;
+margin-left: 0px;
 }
 #content h2{
-	  color: #000080;
+  background: linear-gradient(to right, #C8102E, #Ff1821);
+  color: white;
+  font-family: Century Gothic;
+
 }
 #content {
   font-size: 15px;
@@ -808,10 +818,7 @@ margin-left: 25px;
 #content p {
   margin: 0px 0px 20px 0px;
 }
-#content strong {
-  font-size: 19px;
-  color: #333333;
-}
+
 #content .more p a,
 #content .more p.adress {
   font-family: Calibri;
@@ -1315,6 +1322,7 @@ display: none;
 .services_bottom a:hover{
 	color: #ff8c00;
 }
+
 .contacts_FIO{
 	margin: 0 0 10px 0;
 }
@@ -1327,7 +1335,8 @@ display: none;
 	color:#000080;
 }
 .wp-container-3 {
-padding-left:30px;
+  padding-left: 300px;
+  padding-right: 330px;
 }
 .wp_cont{
 padding-left: 0px;	
