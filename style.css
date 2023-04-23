@@ -9,8 +9,14 @@
 */
 @import "./css/fonts.css";
 /*****functional class*****/
+.con-opt, .con-opt a {
+  margin: 0px 0px -11px 0px;
+  color: black;
+  transition: 0.3s;
+  text-decoration: none;
+}
 .p-s {
-  padding: 7px;
+  padding: 7px; 
 }
 /**********************************************************************************************************************************/
 
@@ -34,6 +40,7 @@ body {
   width: calc(100vw - 15%);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 150px;
 }
 #header {
   background: linear-gradient(to right, #C8102E, #Ff1821);
@@ -800,6 +807,7 @@ text-align: justify;
     font-family: Acrom;
     font-size: 18px;
     line-height: 20px;
+    text-align: justify;
 }
 #content h2  {
 margin-left: 0px;
@@ -813,11 +821,8 @@ margin-left: 0px;
 #content {
   font-size: 15px;
   line-height: 23px;
+}
 
-}
-#content p {
-  margin: 0px 0px 20px 0px;
-}
 
 #content .more p a,
 #content .more p.adress {
