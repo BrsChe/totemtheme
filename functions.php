@@ -39,12 +39,6 @@ if ( function_exists('register_sidebar') )
         'after_title' => '',
     ));
 add_theme_support( 'post-thumbnails' );
- 
-
-
-    
-
-
 
 add_filter('excerpt_length', 'the_except');
 function the_except() {
@@ -159,4 +153,44 @@ add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
  
 add_filter('page_row_actions', 'rd_duplicate_post_link', 10, 2);
 
+/** Добавление произвольных полей в редактирование записей / страниц */
+add_action('add_meta_boxes', 'extra_fields', true);
+
+function extra_fields(){
+    add_meta_box('extra_fields', 'Блок дополнительных полей', 'extra_fields_box_func', array('post'), 'normal', 'high');
+}
 ?>
+<?php function extra_fields_box_func($post){ ?>
+
+<label>Адрес</label>
+<input type="text" name="extra[address]" value="<?php echo get_post_meta($post->ID, 'address', true); ?>" style="width:100%">
+
+<label>Квадратура</label>
+<input type="text" name="extra[quadrature]" value="<?php echo get_post_meta($post->ID, 'quadrature', true); ?>" style="width:100%">
+
+<label>Тип пространства</label>
+<textarea name="extra[type_of_space]" style="width:100%">
+    <?php echo get_post_meta($post->ID, 'type_of_space', true); ?>
+</textarea>
+<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>">
+
+<?php }
+    // включить обновление полей при сохранении
+    add_action('save_post', 'extra_fields_update', 0);
+    // Сохраняем данные, при сохранении поста
+    function extra_fields_update( $post_id ){
+    if (!isset($_POST['extra_fields_nonce'])||!wp_verify_nonce($_POST['extra_fields_nonce'], __FILE__)) return false; // проверка
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return false; // если это автосохранение
+    if (!current_user_can('edit_post', $post_id)) return false; // если юзер не имеет право редактировать запись
+    if (!isset($_POST['extra'])) return false;
+    // теперь, нужно сохранить/удалить данные
+    $_POST['extra'] = array_map('trim', $_POST['extra']);
+    foreach($_POST['extra'] as $key => $value){
+    if(empty($value)){
+    delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+    continue;
+    }
+    update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+    }
+    return $post_id;
+}?>

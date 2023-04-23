@@ -1,27 +1,52 @@
 <?php /*.Template name: Home*/ ?>
 <?php get_header(); ?>
 <div class="torgi">
-	<div class= "text_torgi_1"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
-	<div class="carts_item">
-        <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
-		<div class="carts_item_in">
-			<div class="item_image">
-                <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
+    <div class= "heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
+    <div class="carts_item container">
+        <div class="carts_item_wrapper">
+            <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
+            <div class="carts_item_in">
+                <div class="item_title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </div>
+                <div class="item_image">
+                    <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
+                </div>
+                <div class="carts_text_1 carts_text">
+                    <a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
+                </div>
+                <div class="item_meta_fields">
+                    <?php $address = get_post_meta($post->ID, 'address', true); if ( $address ) { ?>
+                        <div class="item_meta-address">
+                            <div class="icon-location-ind"></div>
+                            <div class="item_meta_text"><?php echo $address; ?></div>
+                        </div>
+                    <?php } ?>
+                    <?php $quadrature = get_post_meta($post->ID, 'quadrature', true); if ( $quadrature ) { ?>
+                        <div class="item_meta-quadrature">
+                            <div class="icon-square-ind"></div>
+                            <div class="item_meta_text"><?php echo $quadrature; ?></div>
+                        </div>
+                    <?php } ?>
+                    <?php $type_of_space = get_post_meta($post->ID, 'type_of_space', true); if ( $type_of_space ) { ?>
+                        <div class="item_meta-type_of_space">
+                            <div class="icon-building-ind"></div>
+                            <div class="item_meta_text"><?php echo $type_of_space; ?></div>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
-			<div class="carts_text_1 carts_text">
-                <a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
-            </div>
-		</div>
-        <?php $i++; endwhile; wp_reset_query(); endif; ?>
-		<div class="arr_1">
-            <p><a href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/">Посмотреть все <br>объекты &rarr;</a></p>
-		</div>
+            <?php $i++; endwhile; wp_reset_query(); endif; ?>
+        </div>
+    </div>
+    <div class="arr_1">
+        <a class="gradient-bg-blue" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/">смотреть все объекты</a>
     </div>
 
 </div>
 
-<div id="uslugi_new" class="uslugi_new">
-	<div class="uslugi_text text_torgi"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
+<div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
+<div id="uslugi_new container" class="uslugi_new">
 	<div class="carts_uslugi">
 		<div class="carts_uslugi_1 all_carts_uslugi"><a style="display: block;" href="./soprovozdeniie-sdelok-oformlenie/" target="blank"><div class="a_block"><p class="text_center">Сопровождение сделок и проверка объектов недвижимости</p></div></a></div>
 		<div class="carts_uslugi_2 all_carts_uslugi"><a style="display: block;" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank"><div class="a_block"><p class="text_center">Участие в торгах по покупке и аренде недвижимости</p></div></a></div>
@@ -110,37 +135,36 @@
                 </div>
             </div>-->
  
- <div class="clearfix"></div>
-            <aside class="module-4">
-                <div class="module-inner container">
-                    	<div class="uslugi_text text_torgi"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top phone")) ?></div>
-                    <div class="module-content ">
-                    <?php if (have_posts()) : query_posts("cat=3"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
-                        
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-image">
-                                    <?php if ( has_post_thumbnail() ) {the_post_thumbnail();}?>
-                                </div>
-                                <div class="item-title">
-                                    <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                                </div>
-                                <div class="item-date"><?php echo the_date('d.m.Y'); ?></div>
-                                <div class="item-content">
-                                    <p><?php the_content("подробнее..."); ?></p>
-                                </div>
-                            </div>
+    <div class="clearfix"></div>
+    <aside class="module-4">
+        <div class="module-inner container">
+            <div class="uslugi_text"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top phone")) ?></div>
+            <div class="module-content ">
+                <?php if (have_posts()) : query_posts("cat=3"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
+                <div class="item">
+                    <div class="item-inner">
+                        <div class="item-image">
+                            <?php if ( has_post_thumbnail() ) {the_post_thumbnail();}?>
                         </div>
-			        <?php $i++; endwhile; wp_reset_query(); endif; ?>
-                    <div class="item">
-                        <div class="item-title" style="position: relative; top: 50px;">
-                            <a href="/novosti-i-obzory">Посмотреть все <br>новости &rarr;</a>
+                        <div class="item-title">
+                            <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
                         </div>
-                    </div>
+                        <div class="item-date"><?php echo the_date('d.m.Y'); ?></div>
+                        <div class="item-content">
+                            <p><?php the_content("подробнее..."); ?></p>
+                        </div>
                     </div>
                 </div>
-            </aside>
+                <?php $i++; endwhile; wp_reset_query(); endif; ?>
+                <div class="item">
+                    <div class="item-title" style="position: relative; top: 50px;">
+                        <a href="/novosti-i-obzory">Посмотреть все <br>новости &rarr;</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </aside>
+</div>
 <?php
 get_footer();
 ?>

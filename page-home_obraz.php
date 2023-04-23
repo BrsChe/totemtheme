@@ -166,7 +166,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 
         </header>
 <div class="torgi">
-	<div class= "text_torgi_1"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
+	<div class= "heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
 	<div class="carts_item"> <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
 		<div class="carts_item_in">
 			<div class="item_image"><a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) {

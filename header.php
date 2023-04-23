@@ -89,7 +89,7 @@
 
       </script>
 <?php wp_head(); ?>
-   <header role="banner" id="header">
+   <header role="banner" id="header" class="gradient-bg-red">
       <div class="container">
          <div class="logo">
             <img src="<?php echo get_template_directory_uri() . '/images/totem/logo.svg';?>" alt="<?php bloginfo('sitetitle'); ?>" title="<?php bloginfo('sitetitle'); ?>">
