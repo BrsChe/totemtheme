@@ -12,22 +12,8 @@
       <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
       <![endif]-->
       <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon.png" />
-      <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/owl.carousel.min.css">
-      <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/owl.theme.default.min.css">
       <?php wp_head();?>
       <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
-      <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-      <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
-      <script>
-         $(function(){
-            $(".owl-carousel").owlCarousel({
-                  nav: true,
-                  dots: false,
-                  navText: ['&#8592','&#8594;'],
-                  slideBy: 3
-            });
-         });
-      </script>
    </head>
    <body>
       <!-- Rating@Mail.ru counter -->
@@ -91,9 +77,9 @@
 <?php wp_head(); ?>
    <header role="banner" id="header" class="gradient-bg-red">
       <div class="container">
-         <div class="logo">
+         <a href="/" class="logo">
             <img src="<?php echo get_template_directory_uri() . '/images/totem/logo.svg';?>" alt="<?php bloginfo('sitetitle'); ?>" title="<?php bloginfo('sitetitle'); ?>">
-         </div>
+         </a>
          <div class="header_naw">
             <?php
                $topmenu = array('echo' => false, 'items_wrap' => '%3$s', 'container' => false, 'menu' => 'top-menu', 'menu_class' => 'top-menu-inner', 'depth' => 1);
