@@ -45,24 +45,121 @@
 
 </div>
 
+<?php $uslugi = array(
+    'Сопровождение сделок с недвижимостью',
+    'Покупка, аренда земли и иных объектов недвижимости на торгах',
+    'Судебные споры по вопросам недвижимости и строительства',
+    'Оформление земли и ИЖС',
+    'Правовая поддержка арендного бизнеса и инвестиций в недвижимость',
+    'Сопровождение СНТ, коттеджных поселков'
+);?>
 <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
-<div id="uslugi_new container" class="uslugi_new">
-	<div class="carts_uslugi">
-		<div class="carts_uslugi_1 all_carts_uslugi"><a style="display: block;" href="./soprovozdeniie-sdelok-oformlenie/" target="blank"><div class="a_block"><p class="text_center">Сопровождение сделок и проверка объектов недвижимости</p></div></a></div>
-		<div class="carts_uslugi_2 all_carts_uslugi"><a style="display: block;" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank"><div class="a_block"><p class="text_center">Участие в торгах по покупке и аренде недвижимости</p></div></a></div>
-		<div class="carts_uslugi_3 all_carts_uslugi"><a style="display: block;" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank"><div class="a_block"><p class="text_center">Судебные споры по недвижимости</p></div></a></div>
-		<div class="carts_uslugi_4 all_carts_uslugi"><a style="display: block;" href="./izhs-oformlenie-zemli/" target="blank"><div class="a_block"><p class="text_center">Оформление земли, ИЖС.</p></div></a></div>
-		<div class="carts_uslugi_5 all_carts_uslugi"><a style="display: block;" href="./arenda-i-investicii-v-nedvizhimost/" target="blank"><div class="a_block"><p class="text_center">Правовая поддержка арендного бизнеса и инвестиций в недвижимость</p></div></a></div>
-		<div class="carts_uslugi_6 all_carts_uslugi"><a style="display: block;" href="./snt-kottedgi/" target="blank"><div class="a_block"><p class="text_center">Сопровождение СНТ, коттеджных поселков</p></div></a></div>
-	</div>
+<div id="uslugi_new" class="uslugi_new">
+    <div class="uslugi_bg gradient-bg-blue-to-left"></div>
+    <div class="uslugi_item">
+        <img
+            class="uslugi_img"
+            src="<?php echo get_template_directory_uri() . '/images/totem/transaction-support.png'; ?>"
+            alt="<?php echo $uslugi[0] ?>"
+            title="<?php echo $uslugi[0] ?>">
+        <div class="uslugi_info">
+            <div class="uslugi_title"><?php echo $uslugi[0] ?></div>
+            <ul class="uslugi_list">
+                <li>Подготовка и правовая экспертиза документов, договоров</li>
+                <li>Юридическая проверка объекта недвижимости и прав на него</li>
+                <li>Оценка и анализ рисков, представление интересов</li>
+            </ul>
+            <a class="uslugi_moreinfobtn gradient-bg-red" href="./soprovozdeniie-sdelok-oformlenie/" target="blank">Подробнее</a>
+        </div>
+    </div>
+    <div class="uslugi_item">
+        <img
+            class="uslugi_img"
+            src="<?php echo get_template_directory_uri() . '/images/totem/land-lease.png'; ?>"
+            alt="<?php echo $uslugi[1] ?>"
+            title="<?php echo $uslugi[1] ?>">
+        <div class="uslugi_info">
+            <div class="uslugi_title"><?php echo $uslugi[1] ?></div>
+            <ul class="uslugi_list">
+                <li>Подбор объекта по Вашим условиям</li>
+                <li>Участие в торгах, подготовка документов</li>
+                <li>Консультирование и оформление прав</li>
+            </ul>
+            <a class="uslugi_moreinfobtn gradient-bg-red" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank">Подробнее</a>
+        </div>
+    </div>
+    <div class="uslugi_item">
+        <img
+            class="uslugi_img"
+            src="<?php echo get_template_directory_uri() . '/images/totem/legal-disputes.png'; ?>"
+            alt="<?php echo $uslugi[2] ?>"
+            title="<?php echo $uslugi[2] ?>">
+        <div class="uslugi_info">
+            <div class="uslugi_title"><?php echo $uslugi[2] ?></div>
+            <ul class="uslugi_list">
+                <li>Досудебное урегулирование (участие в переговорах, претензионная работа)</li>
+                <li>Подготовка документов для обращения в суд (исковых заявлений, жалоб, отзывов на иск, ходатайств, иных процессуальных документов)</li>
+                <li>Представление интересов в суде</li>
+            </ul>
+            <a class="uslugi_moreinfobtn gradient-bg-red" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank">Подробнее</a>
+        </div>
+    </div>
+    <div class="uslugi_item">
+        <img
+            class="uslugi_img"
+            src="<?php echo get_template_directory_uri() . '/images/totem/land-registration.png'; ?>"
+            alt="<?php echo $uslugi[3] ?>"
+            title="<?php echo $uslugi[3] ?>">
+        <div class="uslugi_info">
+            <div class="uslugi_title"><?php echo $uslugi[3] ?></div>
+            <ul class="uslugi_list">
+                <li>Оформление недвижимости, регистрация прав</li>
+                <li>Земельные вопросы, сопровождение строительства, адресация, подключение</li>
+                <li>Юридические консультации по вопросам недвижимости, земли, строительства</li>
+            </ul>
+            <a class="uslugi_moreinfobtn gradient-bg-red" href="./izhs-oformlenie-zemli/" target="blank">Подробнее</a>
+        </div>
+    </div>
+    <div class="uslugi_item">
+        <img
+            class="uslugi_img"
+            src="<?php echo get_template_directory_uri() . '/images/totem/legal-support.png'; ?>"
+            alt="<?php echo $uslugi[4] ?>"
+            title="<?php echo $uslugi[4] ?>">
+        <div class="uslugi_info">
+            <div class="uslugi_title"><?php echo $uslugi[4] ?></div>
+            <ul class="uslugi_list">
+                <li>Юридическая проверка объектов инвестиций в недвижимость</li>
+                <li>Сопровождение и структурирование сделок, владения активами</li>
+                <li>Работа с арендаторами, взыскание задолженности</li>
+            </ul>
+            <a class="uslugi_moreinfobtn gradient-bg-red" href="./arenda-i-investicii-v-nedvizhimost/" target="blank">Подробнее</a>
+        </div>
+    </div>
+    <div class="uslugi_item">
+        <img
+            class="uslugi_img"
+            src="<?php echo get_template_directory_uri() . '/images/totem/snt-support.png'; ?>"
+            alt="<?php echo $uslugi[5] ?>"
+            title="<?php echo $uslugi[5] ?>">
+        <div class="uslugi_info">
+            <div class="uslugi_title"><?php echo $uslugi[5] ?></div>
+            <ul class="uslugi_list">
+                <li>Создание, регистрация СНТ, коттеджных поселков, союзов, ассоциаций, НКО</li>
+                <li>Оформление земли, работа с энергоснабжающими организациями</li>
+                <li>Юридическое сопровождение</li>
+            </ul>
+            <a class="uslugi_moreinfobtn gradient-bg-red" href="./snt-kottedgi/" target="blank">Подробнее</a>
+        </div>
+    </div>
 </div>
 <div id="content">
-            <section class="container" role="main">
-                <?php if (have_posts()): while (have_posts()): the_post(); ?>
-                    <?php the_content(); ?>
-                <?php endwhile; endif; ?>
-            </section>
-        </div>
+    <section class="container" role="main">
+        <?php if (have_posts()): while (have_posts()): the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; endif; ?>
+    </section>
+</div>
 <div id="modules-main">
           <!--  <div class="module-1">
                 <div class="module-1-inner container">

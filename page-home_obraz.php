@@ -184,12 +184,12 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 <div id="uslugi_new" class="uslugi_new">
 	<div class="uslugi_text text_torgi"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
 	<div class="carts_uslugi"> 
-		<div class="carts_uslugi_1 all_carts_uslugi"><a style="display: block;" href="./soprovozdeniie-sdelok-oformlenie/" target="blank"><div class="a_block"><p class="text_center">Сопровождение сделок и проверка объектов недвижимости</p></div></a></div>
-		<div class="carts_uslugi_2 all_carts_uslugi"><a style="display: block;" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank"><div class="a_block"><p class="text_center">Участие в торгах по покупке и аренде недвижимости</p></div></a></div>
-		<div class="carts_uslugi_3 all_carts_uslugi"><a style="display: block;" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank"><div class="a_block"><p class="text_center">Судебные споры по недвижимости</p></div></a></div>
-		<div class="carts_uslugi_4 all_carts_uslugi"><a style="display: block;" href="./izhs-snt-poselki/" target="blank"><div class="a_block"><p class="text_center">Оформление земли, ИЖС.</p></div></a></div>
-		<div class="carts_uslugi_5 all_carts_uslugi"><a style="display: block;" href="#" target="blank"><div class="a_block"><p class="text_center">Правовая поддержка арендного бизнеса и инвестиций в недвижимость</p></div></a></div>
-		<div class="carts_uslugi_6 all_carts_uslugi"><a style="display: block;" href="#" target="blank"><div class="a_block"><p class="text_center">Сопровождение СНТ, коттеджных поселков</p></div></a></div>
+		<div class="carts_uslugi_1 all_carts_uslugi"><a style="display: block;" href="./soprovozdeniie-sdelok-oformlenie/" target="blank"><div><p class="text_center">Сопровождение сделок и проверка объектов недвижимости</p></div></a></div>
+		<div class="carts_uslugi_2 all_carts_uslugi"><a style="display: block;" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank"><div><p class="text_center">Участие в торгах по покупке и аренде недвижимости</p></div></a></div>
+		<div class="carts_uslugi_3 all_carts_uslugi"><a style="display: block;" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank"><div><p class="text_center">Судебные споры по недвижимости</p></div></a></div>
+		<div class="carts_uslugi_4 all_carts_uslugi"><a style="display: block;" href="./izhs-snt-poselki/" target="blank"><div><p class="text_center">Оформление земли, ИЖС.</p></div></a></div>
+		<div class="carts_uslugi_5 all_carts_uslugi"><a style="display: block;" href="#" target="blank"><div><p class="text_center">Правовая поддержка арендного бизнеса и инвестиций в недвижимость</p></div></a></div>
+		<div class="carts_uslugi_6 all_carts_uslugi"><a style="display: block;" href="#" target="blank"><div><p class="text_center">Сопровождение СНТ, коттеджных поселков</p></div></a></div>
 	</div>
 </div>
 <div id="content">
