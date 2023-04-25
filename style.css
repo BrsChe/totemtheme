@@ -9,6 +9,38 @@
 */
 @import "./css/fonts.css";
 /*****functional class*****/
+.body_foot {
+  display: flex;
+}
+.info_mail.info_all a::before {
+  content: "\e905";
+  font-family: 'icomoon';
+  display: contents;
+  color: #ffffff;
+  margin-right: 10px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./images/totem/mail.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: baseline;
+}
+
+.info_tel.info_all a::before {
+  content: "\e906";
+  font-family: 'icomoon';
+  display: contents;
+  color: #ffffff;
+  margin-right: 10px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./images/totem/phone.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .font-century {
   font-family: 'centurygothic';
 }
@@ -26,6 +58,33 @@
   color: black;
   transition: 0.3s;
   text-decoration: none;
+}
+
+.con-opt-phone::before {
+  content: "\e906";
+  font-family: 'icomoon';
+  display: contents;
+  color: #C8102E;
+  margin-right: 10px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./images/totem/phone.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.con-opt-mail::before {
+  content: "\e905";
+  font-family: 'icomoon';
+  display: contents;
+  color: #C8102E;
+  margin-right: 10px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./images/totem/phone.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .p-s {
   padding: 7px;
