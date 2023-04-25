@@ -9,6 +9,18 @@
 */
 @import "./css/fonts.css";
 /*****functional class*****/
+.font-century {
+  font-family: 'centurygothic';
+}
+
+.color-us-bg {
+  background: none;
+}
+
+.font-color-red {
+  color: #C8102E;
+}
+
 .con-opt, .con-opt a {
   margin: 0px 0px -11px 0px;
   color: black;
@@ -45,6 +57,11 @@ html {
 body {
 
 }
+
+h2 {
+  margin: unset;
+}
+
 .container:after,
 .container:before {
   clear: both;
@@ -201,7 +218,6 @@ body {
 	  padding-left: 30px;
 }
 #content strong {
-    color: #C8102E;
     font-size: 29px;
     font-family: Century Gothic;
     font-weight: 700;
@@ -212,12 +228,13 @@ body {
     line-height: 20px;
     text-align: justify;
 }
-#content h2 {
+/* #content h2 {
   background: linear-gradient(to right, #C8102E, #Ff1821);
   color: white;
   font-family: Century Gothic;
   margin-left: 0px;
-}
+  padding: 7px;
+} */
 #content {
   font-size: 15px;
   line-height: 23px;
@@ -478,7 +495,9 @@ p.text_logo_down {
     font-size: 27px;
 	font-weight: 700;
 }
-
+.contacts-photo {
+  
+}
 .contact__item {
   margin-bottom: 10px;
   position: relative;
@@ -523,6 +542,7 @@ p.text_logo_down {
   padding: 12px 15px;
   font-family: centurygothic;
 	transition: 0.3s;
+  text-transform: uppercase;
 }
 .heading a{
   color: inherit;
@@ -742,8 +762,7 @@ display: none;
 	margin-bottom:80px !important;
 }
 .wp-container-3 {
-  padding-left: 300px;
-  padding-right: 330px;
+  padding: 0 200px;
 }
 .wp_cont{
 padding-left: 0px;
