@@ -9,7 +9,7 @@
                 <div class="item_title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
-                <div class="item_image">
+                <div class="item_image box_shadow">
                     <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
                 </div>
                 <div class="carts_text_1 carts_text">
@@ -54,7 +54,7 @@
 );?>
 <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
 <div id="uslugi_new" class="uslugi_new">
-    <div class="uslugi_bg gradient-bg-blue-to-left"></div>
+    <div class="uslugi_bg gradient-bg-blue-to-left box_shadow"></div>
     <div class="uslugi_item">
         <img
             class="uslugi_img"
@@ -152,7 +152,7 @@
         </div>
     </div>
 </div>
-<div class="home_news">
+<div class="home_news box_shadow">
     <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top phone")) ?></div>
     <div class="home_news_wrapper container">
         <div class="home_news_content">
