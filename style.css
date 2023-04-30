@@ -9,6 +9,20 @@
 */
 @import "./css/fonts.css";
 /*****functional class*****/
+.p-s-t {
+  padding: 10px;
+}
+
+.float-torgi {
+  float: right;
+  text-align: center;
+}
+.bg-price-torgi {
+  background: linear-gradient(to right, #C8102E, #Ff1821);
+  color: #ffffff;
+  float: right;
+}
+
 .body_foot {
   display: flex;
 }
