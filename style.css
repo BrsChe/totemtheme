@@ -9,6 +9,35 @@
 */
 @import "./css/fonts.css";
 /*****functional class*****/
+.wp-block-group__inner-container li::marker {
+  color: #bc1d1e;
+}
+
+.font-size {
+  font-size: 19px;
+}
+
+.m-s  {
+  margin: 10px 230px 20px 10px;
+}
+
+.m-s-1 {
+  margin: 10px 315px 20px 10px;
+}
+
+.m-s-2 {
+  margin: 10px 165px 20px -15px;
+  font-size: 18px
+}
+
+.font-weight-torgi {
+  font-weight: 600;
+}
+
+.font-weight-torgi-1 {
+  font-weight: 500;
+}
+
 .p-s-t {
   padding: 10px;
 }
@@ -108,6 +137,17 @@
   box-shadow: 1px -1px 6px #2222224f;
 }
 /**********************************************************************************************************************************/
+
+.contacts_FIO {
+  font-size: 29px;
+  font-family: Century Gothic;
+  font-weight: 700;
+}
+
+.wp-block-heading-torgi {
+  margin-left: calc(-1% - 17px);
+  margin-right: 590px;
+}
 
 html {
   font-family: 'Acrom';
@@ -285,17 +325,17 @@ h2 {
 	  margin-top: 50px;
 	  padding-left: 30px;
 }
-#content strong {
+/* #content strong {
     font-size: 29px;
     font-family: Century Gothic;
     font-weight: 700;
-}
-#content p {
+} */
+/* #content p {
     font-family: Acrom;
     font-size: 18px;
     line-height: 20px;
     text-align: justify;
-}
+} */
 /* #content h2 {
   background: linear-gradient(to right, #C8102E, #Ff1821);
   color: white;
