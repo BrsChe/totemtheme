@@ -9,6 +9,13 @@
 */
 @import "./css/fonts.css";
 /*****functional class*****/
+.color-dark_gray, #content h3 {
+  color: #57585a;
+}
+
+.f-s {
+  font-size: 0.7rem;
+}
 
 .body_foot {
   display: flex;
@@ -96,16 +103,7 @@
   box-shadow: 1px -1px 6px #2222224f;
 }
 /**********************************************************************************************************************************/
-.torgi_about {
-    font-family: centurygothic;
-    transition: 0.3s;
-    text-transform: none;
-    position: relative;
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 12px 15px;
-    line-height: 1.5rem;
-}
+
 .torgi_price {
   text-decoration: none;
   text-transform: uppercase;
@@ -259,7 +257,6 @@ h2 {
   font-weight: 600;
   font-size: 0.85rem;
   font-family: 'centurygothic';
-  color: #50504d;
 }
 .home_news-item .moreinfobtn {
   text-align: center;
@@ -330,6 +327,7 @@ h2 {
 #content {
   flex-grow: 1;
   margin: 40px 0;
+  color: #50504d;
 }
 #content .more p a,
 #content .more p.adress {

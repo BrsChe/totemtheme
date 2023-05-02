@@ -166,7 +166,7 @@
                 <div class="home_news-item_title item_title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
-                <div class="home_news-item_date"><?php echo the_date('d.m.Y'); ?></div>
+                <div class="home_news-item_date color-dark_gray"><?php echo the_date('d.m.Y'); ?></div>
                 <a class="moreinfobtn gradient-bg-red" href="<?php the_permalink(); ?>">Подробнее</a>
             </div>
             <?php $i++; endwhile; wp_reset_query(); endif; ?>
