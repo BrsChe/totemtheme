@@ -170,7 +170,7 @@ function extra_fields(){
 
 <label>Тип пространства</label>
 <textarea name="extra[type_of_space]" style="width:100%">
-    <?php echo get_post_meta($post->ID, 'type_of_space', true); ?>
+<?php echo get_post_meta($post->ID, 'type_of_space', true); ?>
 </textarea>
 <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>">
 

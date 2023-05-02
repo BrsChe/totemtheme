@@ -1,6 +1,6 @@
 <?php /*.Template name: Home*/ ?>
 <?php get_header(); ?>
-<div class="torgi">
+<div id="auctions" class="torgi">
     <div class= "heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
     <div class="carts_item container">
         <div class="carts_item_wrapper">
@@ -52,107 +52,109 @@
     'Правовая поддержка арендного бизнеса и инвестиций в недвижимость',
     'Сопровождение СНТ, коттеджных поселков'
 );?>
-<div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
-<div id="uslugi_new" class="uslugi_new">
-    <div class="uslugi_bg gradient-bg-blue-to-left box_shadow"></div>
-    <div class="uslugi_item">
-        <img
-            class="uslugi_img"
-            src="<?php echo get_template_directory_uri() . '/images/totem/transaction-support.png'; ?>"
-            alt="<?php echo $uslugi[0] ?>"
-            title="<?php echo $uslugi[0] ?>">
-        <div class="uslugi_info">
-            <div class="uslugi_title"><?php echo $uslugi[0] ?></div>
-            <ul class="uslugi_list">
-                <li>Подготовка и правовая экспертиза документов, договоров</li>
-                <li>Юридическая проверка объекта недвижимости и прав на него</li>
-                <li>Оценка и анализ рисков, представление интересов</li>
-            </ul>
-            <a class="moreinfobtn gradient-bg-red" href="./soprovozdeniie-sdelok-oformlenie/" target="blank">Подробнее</a>
+<div id="services">
+    <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 2")) ?></div>
+    <div id="uslugi_new" class="uslugi_new">
+        <div class="uslugi_bg gradient-bg-blue-to-left box_shadow"></div>
+        <div class="uslugi_item">
+            <img
+                class="uslugi_img"
+                src="<?php echo get_template_directory_uri() . '/images/totem/transaction-support.png'; ?>"
+                alt="<?php echo $uslugi[0] ?>"
+                title="<?php echo $uslugi[0] ?>">
+            <div class="uslugi_info">
+                <div class="uslugi_title"><?php echo $uslugi[0] ?></div>
+                <ul class="uslugi_list">
+                    <li>Подготовка и правовая экспертиза документов, договоров</li>
+                    <li>Юридическая проверка объекта недвижимости и прав на него</li>
+                    <li>Оценка и анализ рисков, представление интересов</li>
+                </ul>
+                <a class="moreinfobtn gradient-bg-red" href="./soprovozdeniie-sdelok-oformlenie/" target="blank">Подробнее</a>
+            </div>
         </div>
-    </div>
-    <div class="uslugi_item">
-        <img
-            class="uslugi_img"
-            src="<?php echo get_template_directory_uri() . '/images/totem/land-lease.png'; ?>"
-            alt="<?php echo $uslugi[1] ?>"
-            title="<?php echo $uslugi[1] ?>">
-        <div class="uslugi_info">
-            <div class="uslugi_title"><?php echo $uslugi[1] ?></div>
-            <ul class="uslugi_list">
-                <li>Подбор объекта по Вашим условиям</li>
-                <li>Участие в торгах, подготовка документов</li>
-                <li>Консультирование и оформление прав</li>
-            </ul>
-            <a class="moreinfobtn gradient-bg-red" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank">Подробнее</a>
+        <div class="uslugi_item">
+            <img
+                class="uslugi_img"
+                src="<?php echo get_template_directory_uri() . '/images/totem/land-lease.png'; ?>"
+                alt="<?php echo $uslugi[1] ?>"
+                title="<?php echo $uslugi[1] ?>">
+            <div class="uslugi_info">
+                <div class="uslugi_title"><?php echo $uslugi[1] ?></div>
+                <ul class="uslugi_list">
+                    <li>Подбор объекта по Вашим условиям</li>
+                    <li>Участие в торгах, подготовка документов</li>
+                    <li>Консультирование и оформление прав</li>
+                </ul>
+                <a class="moreinfobtn gradient-bg-red" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/" target="blank">Подробнее</a>
+            </div>
         </div>
-    </div>
-    <div class="uslugi_item">
-        <img
-            class="uslugi_img"
-            src="<?php echo get_template_directory_uri() . '/images/totem/legal-disputes.png'; ?>"
-            alt="<?php echo $uslugi[2] ?>"
-            title="<?php echo $uslugi[2] ?>">
-        <div class="uslugi_info">
-            <div class="uslugi_title"><?php echo $uslugi[2] ?></div>
-            <ul class="uslugi_list">
-                <li>Досудебное урегулирование (участие в переговорах, претензионная работа)</li>
-                <li>Подготовка документов для обращения в суд (исковых заявлений, жалоб, отзывов на иск, ходатайств, иных процессуальных документов)</li>
-                <li>Представление интересов в суде</li>
-            </ul>
-            <a class="moreinfobtn gradient-bg-red" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank">Подробнее</a>
+        <div class="uslugi_item">
+            <img
+                class="uslugi_img"
+                src="<?php echo get_template_directory_uri() . '/images/totem/legal-disputes.png'; ?>"
+                alt="<?php echo $uslugi[2] ?>"
+                title="<?php echo $uslugi[2] ?>">
+            <div class="uslugi_info">
+                <div class="uslugi_title"><?php echo $uslugi[2] ?></div>
+                <ul class="uslugi_list">
+                    <li>Досудебное урегулирование (участие в переговорах, претензионная работа)</li>
+                    <li>Подготовка документов для обращения в суд (исковых заявлений, жалоб, отзывов на иск, ходатайств, иных процессуальных документов)</li>
+                    <li>Представление интересов в суде</li>
+                </ul>
+                <a class="moreinfobtn gradient-bg-red" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank">Подробнее</a>
+            </div>
         </div>
-    </div>
-    <div class="uslugi_item">
-        <img
-            class="uslugi_img"
-            src="<?php echo get_template_directory_uri() . '/images/totem/land-registration.png'; ?>"
-            alt="<?php echo $uslugi[3] ?>"
-            title="<?php echo $uslugi[3] ?>">
-        <div class="uslugi_info">
-            <div class="uslugi_title"><?php echo $uslugi[3] ?></div>
-            <ul class="uslugi_list">
-                <li>Оформление недвижимости, регистрация прав</li>
-                <li>Земельные вопросы, сопровождение строительства, адресация, подключение</li>
-                <li>Юридические консультации по вопросам недвижимости, земли, строительства</li>
-            </ul>
-            <a class="moreinfobtn gradient-bg-red" href="./izhs-oformlenie-zemli/" target="blank">Подробнее</a>
+        <div class="uslugi_item">
+            <img
+                class="uslugi_img"
+                src="<?php echo get_template_directory_uri() . '/images/totem/land-registration.png'; ?>"
+                alt="<?php echo $uslugi[3] ?>"
+                title="<?php echo $uslugi[3] ?>">
+            <div class="uslugi_info">
+                <div class="uslugi_title"><?php echo $uslugi[3] ?></div>
+                <ul class="uslugi_list">
+                    <li>Оформление недвижимости, регистрация прав</li>
+                    <li>Земельные вопросы, сопровождение строительства, адресация, подключение</li>
+                    <li>Юридические консультации по вопросам недвижимости, земли, строительства</li>
+                </ul>
+                <a class="moreinfobtn gradient-bg-red" href="./izhs-oformlenie-zemli/" target="blank">Подробнее</a>
+            </div>
         </div>
-    </div>
-    <div class="uslugi_item">
-        <img
-            class="uslugi_img"
-            src="<?php echo get_template_directory_uri() . '/images/totem/legal-support.png'; ?>"
-            alt="<?php echo $uslugi[4] ?>"
-            title="<?php echo $uslugi[4] ?>">
-        <div class="uslugi_info">
-            <div class="uslugi_title"><?php echo $uslugi[4] ?></div>
-            <ul class="uslugi_list">
-                <li>Юридическая проверка объектов инвестиций в недвижимость</li>
-                <li>Сопровождение и структурирование сделок, владения активами</li>
-                <li>Работа с арендаторами, взыскание задолженности</li>
-            </ul>
-            <a class="moreinfobtn gradient-bg-red" href="./arenda-i-investicii-v-nedvizhimost/" target="blank">Подробнее</a>
+        <div class="uslugi_item">
+            <img
+                class="uslugi_img"
+                src="<?php echo get_template_directory_uri() . '/images/totem/legal-support.png'; ?>"
+                alt="<?php echo $uslugi[4] ?>"
+                title="<?php echo $uslugi[4] ?>">
+            <div class="uslugi_info">
+                <div class="uslugi_title"><?php echo $uslugi[4] ?></div>
+                <ul class="uslugi_list">
+                    <li>Юридическая проверка объектов инвестиций в недвижимость</li>
+                    <li>Сопровождение и структурирование сделок, владения активами</li>
+                    <li>Работа с арендаторами, взыскание задолженности</li>
+                </ul>
+                <a class="moreinfobtn gradient-bg-red" href="./arenda-i-investicii-v-nedvizhimost/" target="blank">Подробнее</a>
+            </div>
         </div>
-    </div>
-    <div class="uslugi_item">
-        <img
-            class="uslugi_img"
-            src="<?php echo get_template_directory_uri() . '/images/totem/snt-support.png'; ?>"
-            alt="<?php echo $uslugi[5] ?>"
-            title="<?php echo $uslugi[5] ?>">
-        <div class="uslugi_info">
-            <div class="uslugi_title"><?php echo $uslugi[5] ?></div>
-            <ul class="uslugi_list">
-                <li>Создание, регистрация СНТ, коттеджных поселков, союзов, ассоциаций, НКО</li>
-                <li>Оформление земли, работа с энергоснабжающими организациями</li>
-                <li>Юридическое сопровождение</li>
-            </ul>
-            <a class="moreinfobtn gradient-bg-red" href="./snt-kottedgi/" target="blank">Подробнее</a>
+        <div class="uslugi_item">
+            <img
+                class="uslugi_img"
+                src="<?php echo get_template_directory_uri() . '/images/totem/snt-support.png'; ?>"
+                alt="<?php echo $uslugi[5] ?>"
+                title="<?php echo $uslugi[5] ?>">
+            <div class="uslugi_info">
+                <div class="uslugi_title"><?php echo $uslugi[5] ?></div>
+                <ul class="uslugi_list">
+                    <li>Создание, регистрация СНТ, коттеджных поселков, союзов, ассоциаций, НКО</li>
+                    <li>Оформление земли, работа с энергоснабжающими организациями</li>
+                    <li>Юридическое сопровождение</li>
+                </ul>
+                <a class="moreinfobtn gradient-bg-red" href="./snt-kottedgi/" target="blank">Подробнее</a>
+            </div>
         </div>
     </div>
 </div>
-<div class="home_news box_shadow">
+<div id="news" class="home_news box_shadow">
     <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top phone")) ?></div>
     <div class="home_news_wrapper container">
         <div class="home_news_content">
