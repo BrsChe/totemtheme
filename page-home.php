@@ -64,7 +64,7 @@
                 title="<?php echo $uslugi[0] ?>">
             <div class="uslugi_info">
                 <div class="uslugi_title"><?php echo $uslugi[0] ?></div>
-                <ul class="uslugi_list">
+                <ul class="uslugi_list marker_color">
                     <li>Подготовка и правовая экспертиза документов, договоров</li>
                     <li>Юридическая проверка объекта недвижимости и прав на него</li>
                     <li>Оценка и анализ рисков, представление интересов</li>
@@ -80,7 +80,7 @@
                 title="<?php echo $uslugi[1] ?>">
             <div class="uslugi_info">
                 <div class="uslugi_title"><?php echo $uslugi[1] ?></div>
-                <ul class="uslugi_list">
+                <ul class="uslugi_list marker_color">
                     <li>Подбор объекта по Вашим условиям</li>
                     <li>Участие в торгах, подготовка документов</li>
                     <li>Консультирование и оформление прав</li>
@@ -96,7 +96,7 @@
                 title="<?php echo $uslugi[2] ?>">
             <div class="uslugi_info">
                 <div class="uslugi_title"><?php echo $uslugi[2] ?></div>
-                <ul class="uslugi_list">
+                <ul class="uslugi_list marker_color">
                     <li>Досудебное урегулирование (участие в переговорах, претензионная работа)</li>
                     <li>Подготовка документов для обращения в суд (исковых заявлений, жалоб, отзывов на иск, ходатайств, иных процессуальных документов)</li>
                     <li>Представление интересов в суде</li>
@@ -112,7 +112,7 @@
                 title="<?php echo $uslugi[3] ?>">
             <div class="uslugi_info">
                 <div class="uslugi_title"><?php echo $uslugi[3] ?></div>
-                <ul class="uslugi_list">
+                <ul class="uslugi_list marker_color">
                     <li>Оформление недвижимости, регистрация прав</li>
                     <li>Земельные вопросы, сопровождение строительства, адресация, подключение</li>
                     <li>Юридические консультации по вопросам недвижимости, земли, строительства</li>
@@ -128,7 +128,7 @@
                 title="<?php echo $uslugi[4] ?>">
             <div class="uslugi_info">
                 <div class="uslugi_title"><?php echo $uslugi[4] ?></div>
-                <ul class="uslugi_list">
+                <ul class="uslugi_list marker_color">
                     <li>Юридическая проверка объектов инвестиций в недвижимость</li>
                     <li>Сопровождение и структурирование сделок, владения активами</li>
                     <li>Работа с арендаторами, взыскание задолженности</li>
@@ -144,7 +144,7 @@
                 title="<?php echo $uslugi[5] ?>">
             <div class="uslugi_info">
                 <div class="uslugi_title"><?php echo $uslugi[5] ?></div>
-                <ul class="uslugi_list">
+                <ul class="uslugi_list marker_color">
                     <li>Создание, регистрация СНТ, коттеджных поселков, союзов, ассоциаций, НКО</li>
                     <li>Оформление земли, работа с энергоснабжающими организациями</li>
                     <li>Юридическое сопровождение</li>
