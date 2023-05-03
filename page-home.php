@@ -103,7 +103,7 @@
                     <li>Подготовка документов для обращения в суд (исковых заявлений, жалоб, отзывов на иск, ходатайств, иных процессуальных документов)</li>
                     <li>Представление интересов в суде</li>
                 </ul>
-                <a class="moreinfobtn gradient-bg-red" href="./sudebnye-spory-po-voprosam-nedvizhimosti-i-stroitelstva/" target="blank">Подробнее</a>
+                <a class="moreinfobtn gradient-bg-red" href="./sudebnye-spori/" target="blank">Подробнее</a>
             </div>
         </div>
         <div class="uslugi_item">
@@ -160,7 +160,7 @@
     <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top phone")) ?></div>
     <div class="home_news_wrapper container">
         <div class="home_news_content">
-            <?php if (have_posts()) : query_posts("cat=4"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
+            <?php if (have_posts()) : query_posts("cat=3"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
             <div class="home_news-item">
                 <a class="home_news-item_image" href="<?php the_permalink(); ?>">
                     <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>

@@ -1,7 +1,9 @@
+<!-- Верстка, которая вставляется в редактирование страницы в админке -->
+
 <div class="contacts_inner">
    <div class="contacts_image">
       <img
-         src="http://wordpress/wp-content/themes/totemtheme/images/totem/OlgaNaumova.jpg"
+         src="/wp-content/themes/totemtheme/images/totem/OlgaNaumova.jpg"
          alt="OlgaNaumova"
          title="OlgaNaumova">
    </div>

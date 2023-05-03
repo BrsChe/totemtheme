@@ -13,7 +13,6 @@
       <![endif]-->
       <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon.png" />
       <?php wp_head();?>
-      <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
    </head>
    <body>
       <!-- Rating@Mail.ru counter -->
@@ -82,7 +81,7 @@
          </a>
          <div class="header_naw">
             <?php
-               $topmenu = array('echo' => false, 'items_wrap' => '%3$s', 'container' => false, 'menu' => 'top-menu', 'menu_class' => 'top-menu-inner', 'depth' => 1);
+               $topmenu = array('echo' => false, 'items_wrap' => '%3$s', 'container' => false, 'menu' => 'home-page-menu', 'menu_class' => 'top-menu-inner', 'depth' => 1);
                $menu = wp_nav_menu($topmenu);
                echo strip_tags($menu, '<a>');
             ?>

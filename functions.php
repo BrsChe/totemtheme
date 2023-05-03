@@ -1,4 +1,12 @@
 <?php
+remove_filter( 'render_block', 'wp_render_layout_support_flag', 10, 2 );
+remove_filter( 'render_block', 'gutenberg_render_layout_support_flag', 10, 2 );
+
+function wpb_custom_new_menu() {
+register_nav_menu('home-page-menu',__('home-page-menu'));
+}
+add_action('init', 'wpb_custom_new_menu');
+
 function enqueue_styles() {
   wp_enqueue_style( 'naumov-style', get_stylesheet_uri());
 }
