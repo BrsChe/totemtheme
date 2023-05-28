@@ -1,48 +1,69 @@
 <?php /*.Template name: Home*/ ?>
 <?php get_header(); ?>
 <div id="auctions" class="torgi">
+    <script>
+        $(function(){
+            $(".owl-carousel").owlCarousel({
+                    nav: false,
+                    loop: false,
+                    dots: true,
+                    // navText: ['&#8592','&#8594;'],
+                    slideBy: 3,
+                    responsive: {
+                        0: { items: 1 }, 576: { items: 2 }, 768: { items: 3 }
+                    }
+            });
+        });
+    </script>
     <div class= "heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top 1")) ?></div>
     <div class="carts_item container">
         <div class="carts_item_wrapper">
-            <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
-            <div class="carts_item_in">
-                <div class="item_title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </div>
-                <div class="item_image box_shadow">
-                    <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
-                </div>
-                <div class="carts_info">
-                    <div class="carts_text_1 carts_text">
-                        <a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
+            <div class="owl-carousel owl-theme">
+                <?php if (have_posts()) : query_posts("cat=5"); $i=0; while (have_posts() && ($i < 5)): the_post(); ?>
+                <div class="carts_item_in item">
+                    <div class="item_title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </div>
-                    <div class="item_meta_fields">
-                        <?php $address = get_post_meta($post->ID, 'address', true); if ( $address ) { ?>
-                            <div class="item_meta-address">
-                                <div class="icon-location-ind"></div>
-                                <div class="item_meta_text"><?php echo $address; ?></div>
-                            </div>
-                        <?php } ?>
-                        <?php $quadrature = get_post_meta($post->ID, 'quadrature', true); if ( $quadrature ) { ?>
-                            <div class="item_meta-quadrature">
-                                <div class="icon-square-ind"></div>
-                                <div class="item_meta_text"><?php echo $quadrature; ?></div>
-                            </div>
-                        <?php } ?>
-                        <?php $type_of_space = get_post_meta($post->ID, 'type_of_space', true); if ( $type_of_space ) { ?>
-                            <div class="item_meta-type_of_space">
-                                <div class="icon-building-ind"></div>
-                                <div class="item_meta_text"><?php echo $type_of_space; ?></div>
-                            </div>
-                        <?php } ?>
+                    <div class="item_image box_shadow">
+                        <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
+                    </div>
+                    <div class="carts_info">
+                        <div class="carts_text_1 carts_text">
+                            <a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
+                        </div>
+                        <div class="item_meta_fields">
+                            <?php $address = get_post_meta($post->ID, 'address', true); if ( $address ) { ?>
+                                <div class="item_meta-address">
+                                    <div class="icon-location-ind"></div>
+                                    <div class="item_meta_text"><?php echo $address; ?></div>
+                                </div>
+                            <?php } ?>
+                            <?php $quadrature = get_post_meta($post->ID, 'quadrature', true); if ( $quadrature ) { ?>
+                                <div class="item_meta-quadrature">
+                                    <div class="icon-square-ind"></div>
+                                    <div class="item_meta_text"><?php echo $quadrature; ?></div>
+                                </div>
+                            <?php } ?>
+                            <?php $type_of_space = get_post_meta($post->ID, 'type_of_space', true); if ( $type_of_space ) { ?>
+                                <div class="item_meta-type_of_space">
+                                    <div class="icon-building-ind"></div>
+                                    <div class="item_meta_text"><?php echo $type_of_space; ?></div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <?php $i++; endwhile; wp_reset_query(); endif; ?>
+                <div class="add_carts_item carts_item_in item">
+                    <div class="item_title">
+                        смотреть все объекты
+                    </div>
+                    <div class="arr_1">
+                        <a class="item_image gradient-bg-blue" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/">смотреть все объекты</a>
                     </div>
                 </div>
             </div>
-            <?php $i++; endwhile; wp_reset_query(); endif; ?>
         </div>
-    </div>
-    <div class="arr_1">
-        <a class="gradient-bg-blue" href="./uchastie-v-torgax-po-prodazhe-gos-imushhestva/">смотреть все объекты</a>
     </div>
 </div>
 
@@ -160,22 +181,26 @@
     <div class="heading"><?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top phone")) ?></div>
     <div class="home_news_wrapper container">
         <div class="home_news_content">
-            <?php if (have_posts()) : query_posts("cat=3"); $i=0; while (have_posts() && ($i < 3)): the_post(); ?>
-            <div class="home_news-item">
-                <a class="home_news-item_image" href="<?php the_permalink(); ?>">
-                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>
-                </a>
-                <div class="home_news-item_title item_title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <div class="owl-carousel owl-theme">
+                <?php if (have_posts()) : query_posts("cat=3"); $i=0; while (have_posts() && ($i < 5)): the_post(); ?>
+                <div class="home_news-item item">
+                    <a class="home_news-item_image" href="<?php the_permalink(); ?>">
+                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>
+                    </a>
+                    <div class="home_news-item_title item_title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </div>
+                    <div class="home_news-item_date color-dark_gray"><?php echo the_date('d.m.Y'); ?></div>
+                    <a class="moreinfobtn gradient-bg-red" href="<?php the_permalink(); ?>">Подробнее</a>
                 </div>
-                <div class="home_news-item_date color-dark_gray"><?php echo the_date('d.m.Y'); ?></div>
-                <a class="moreinfobtn gradient-bg-red" href="<?php the_permalink(); ?>">Подробнее</a>
+                <?php $i++; endwhile; wp_reset_query(); endif; ?>
+                <div class="home_news-item home_news-item_add item">
+                    <div class="arr_1">
+                        <a class="gradient-bg-blue" href="/novosti-i-obzory">Смотреть все новости</a>
+                    </div>
+                </div>
             </div>
-            <?php $i++; endwhile; wp_reset_query(); endif; ?>
         </div>
-    </div>
-    <div class="arr_1">
-        <a class="gradient-bg-blue" href="/novosti-i-obzory">Смотреть все новости</a>
     </div>
 </div>
 <?php get_footer(); ?>

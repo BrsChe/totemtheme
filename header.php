@@ -12,7 +12,11 @@
       <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
       <![endif]-->
       <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon.png" />
+      <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/owl.theme.default.min.css">
       <?php wp_head();?>
+      <script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
+      <script src="<?php bloginfo('template_url'); ?>/js/owl.carousel.min.js"></script>
    </head>
    <body>
       <!-- Rating@Mail.ru counter -->
