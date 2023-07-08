@@ -1179,7 +1179,6 @@ padding-left: 0px;
   }
   .item_title {
     font-size: 0.75rem;
-    height: 1.6rem;
   }
   .heading {
     margin-left: unset;
@@ -1305,7 +1304,6 @@ padding-left: 0px;
   }
   .item_title {
     font-size: 0.8rem;
-    height: auto;
     width: 100%;
     margin-bottom: 8px;
   }

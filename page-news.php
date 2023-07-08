@@ -12,15 +12,17 @@
     <div class="home_news_wrapper container">
         <div class="home_news_content">
             <?php if (have_posts()) : query_posts("cat=3"); while (have_posts()): the_post(); ?>
-            <div class="home_news-item">
-                <a class="home_news-item_image" href="<?php the_permalink(); ?>">
-                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>
-                </a>
-                <div class="home_news-item_title item_title">
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            <div class="w-third w_full-bp_m">
+                <div class="home_news-item">
+                    <a class="home_news-item_image" href="<?php the_permalink(); ?>">
+                        <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>
+                    </a>
+                    <div class="home_news-item_title item_title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </div>
+                    <div class="home_news-item_date color-dark_gray"><?php echo the_date('d.m.Y'); ?></div>
+                    <a class="moreinfobtn gradient-bg-red" href="<?php the_permalink(); ?>">Подробнее</a>
                 </div>
-                <div class="home_news-item_date color-dark_gray"><?php echo the_date('d.m.Y'); ?></div>
-                <a class="moreinfobtn gradient-bg-red" href="<?php the_permalink(); ?>">Подробнее</a>
             </div>
             <?php endwhile; wp_reset_query(); endif; ?>
         </div>
