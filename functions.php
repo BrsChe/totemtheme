@@ -7,10 +7,6 @@ register_nav_menu('home-page-menu',__('home-page-menu'));
 }
 add_action('init', 'wpb_custom_new_menu');
 
-function enqueue_styles() {
-  wp_enqueue_style( 'naumov-style', get_stylesheet_uri());
-}
-add_action('wp_enqueue_scripts', 'enqueue_styles');
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 }
@@ -201,4 +197,42 @@ function extra_fields(){
     update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
     }
     return $post_id;
+}
+function theme_add_scripts() {
+    wp_enqueue_style( 'totem-style', get_stylesheet_uri());
+	wp_enqueue_script('jquery');
+    wp_enqueue_script('loadmore', get_stylesheet_directory_uri() . '/custom.js', array('jquery')); // подключаем loadmore.js
+
+}
+add_action('wp_enqueue_scripts', 'theme_add_scripts');
+add_action('wp_ajax_loadmore', 'load_posts_by_ajax_callback');
+add_action('wp_ajax_nopriv_loadmore', 'load_posts_by_ajax_callback');
+function load_posts_by_ajax_callback() {
+	// check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+	$posts_vars = $_POST['query'];
+    $args = array(
+        'post_status' => 'publish',
+        'cat' => $_POST['cat'],
+        'posts_per_page' => $_POST['posts_per_page'],
+        'paged' => $paged
+    );
+    $blog_posts = new WP_Query($args);
+if ($blog_posts->have_posts()) :
+    while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
+        <div class="w-third w_full-bp_m bp_s-w_full">
+            <div class="home_news-item">
+                <a class="home_news-item_image" href="<?php the_permalink(); ?>">
+                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>
+                </a>
+                <div class="home_news-item_title item_title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </div>
+                <div class="home_news-item_date color-dark_gray"><?php echo the_date('d.m.Y'); ?></div>
+                <a class="moreinfobtn gradient-bg-red" href="<?php the_permalink(); ?>">Подробнее</a>
+            </div>
+        </div>
+    <?php endwhile;
+endif;
+die();
 }?>
